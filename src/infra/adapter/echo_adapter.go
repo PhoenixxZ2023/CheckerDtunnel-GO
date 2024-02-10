@@ -3,7 +3,7 @@ package adapter
 import (
 	"net/http"
 
-	"github.com/DTunnel0/CheckUser-Go/src/infra/handler"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/infra/handler"
 	"github.com/labstack/echo/v4"
 )
 
