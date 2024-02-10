@@ -126,7 +126,7 @@ const DEVICE_HTML_CONTENT = `
 
 <body>
     <div class="container">
-        <h1>CHECKUSER - @DuTra01</h1>
+        <h1>CHECKUSER - @TURBONET2023</h1>
         <div class="connectionsArea">
             <h4>TOTAL DE DEVICE ID</h4>
             <div class="container-count">
