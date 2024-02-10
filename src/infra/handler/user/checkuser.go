@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	user_use_case "github.com/DTunnel0/CheckUser-Go/src/domain/usecase/user"
-	"github.com/DTunnel0/CheckUser-Go/src/infra/handler"
+	user_use_case "github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/domain/usecase/user"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/infra/handler"
 )
 
 type checkUserHandler struct {
