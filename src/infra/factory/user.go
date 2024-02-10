@@ -1,14 +1,14 @@
 package factory
 
 import (
-	"github.com/DTunnel0/CheckUser-Go/src/data"
-	"github.com/DTunnel0/CheckUser-Go/src/data/cache"
-	"github.com/DTunnel0/CheckUser-Go/src/data/connection"
-	"github.com/DTunnel0/CheckUser-Go/src/data/dao"
-	"github.com/DTunnel0/CheckUser-Go/src/data/repository"
-	user_use_case "github.com/DTunnel0/CheckUser-Go/src/domain/usecase/user"
-	"github.com/DTunnel0/CheckUser-Go/src/infra/handler"
-	user_handler "github.com/DTunnel0/CheckUser-Go/src/infra/handler/user"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/data"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/data/cache"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/data/connection"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/data/dao"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/data/repository"
+	user_use_case "github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/domain/usecase/user"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/infra/handler"
+	user_handler "github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/infra/handler/user"
 )
 
 func MakeCheckUserHandler() handler.Handler {
