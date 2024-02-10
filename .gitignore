@@ -1,0 +1,9 @@
+app.html
+devices.html
+*.db
+*.sqlite3
+checkuser
+app
+main
+client
+cert.pem
