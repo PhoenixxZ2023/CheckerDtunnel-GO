@@ -3,7 +3,7 @@ package device_use_case
 import (
 	"context"
 
-	"github.com/DTunnel0/CheckUser-Go/src/domain/contract"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/domain/contract"
 )
 
 type ListDevicesByUsernameUseCase struct {
