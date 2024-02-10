@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/DTunnel0/CheckUser-Go/src/domain/contract"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/domain/contract"
 )
 
 type CountConnectionsUseCase struct {
