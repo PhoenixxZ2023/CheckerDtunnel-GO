@@ -6,16 +6,16 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/DTunnel0/CheckUser-Go/src/data/repository"
-	"github.com/DTunnel0/CheckUser-Go/src/infra/factory"
-	"github.com/DTunnel0/CheckUser-Go/src/infra/http"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/data/repository"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/infra/factory"
+	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/infra/http"
 )
 
 var (
 	version     = "0.1.8"
 	version_str = fmt.Sprintf("checkuser %s", version)
-	author      = "Glemison C. Dutra"
-	email       = "glemyson20@gmail.com"
+	author      = "TURBONET2023"
+	email       = "joaopauloreis0987@gmail.com"
 	description = fmt.Sprintf(
 		"DTChecker - CHECKUSER | BY %s <%s> | VERSION: %s",
 		author, email, version,
