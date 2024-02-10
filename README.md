@@ -1,7 +1,7 @@
 # CHECKUSER 🕵️‍♂️
 
 ## Autor
-Glemison C. DuTra ([DuTra](https://t.me/DTunnel))
+TURBBONET2023  ([TURBONET2023](https://t.me/TURBONET2023))
 
 ## COMPILAÇÃO E EXECUÇÃO 🚀
 ```bash
@@ -17,5 +17,5 @@ go build -ldflags="-w -s" -o checkuser ./src
 ## INSTALAÇÃO NO SEU SERVIDOR 🛠️
 Escolha a opção 1:
 ```bash
-bash <(curl -sL https://n9.cl/yo2nc)
+bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/CheckerDtunnel-GO/main/install.sh)
 ```
