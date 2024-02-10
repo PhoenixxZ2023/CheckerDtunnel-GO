@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	device_use_case "github.com/DTunnel0/CheckUser-Go/src/domain/usecase/device"
+	device_use_case "github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/domain/usecase/device"
 )
 
 type ListDevicesByUsernamePresenter struct {
