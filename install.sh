@@ -9,7 +9,7 @@ get_arch() {
 }
 
 install_checkuser() {
-    local latest_release=$(curl -s https://api.github.com/repos/DTunnel0/CheckUser-Go/releases/latest | grep "tag_name" | cut -d'"' -f4)
+    local latest_release=$(curl -s https://api.github.com/repos/PhoenixxZ2023/CheckerDtunnel-GO/releases/latest | grep "tag_name" | cut -d'"' -f4)
     local arch=$(get_arch)
 
     if [ "$arch" = "unsupported" ]; then
@@ -19,7 +19,7 @@ install_checkuser() {
 
     local name="checkuser-linux-$arch"
     echo "Baixando $name..."
-    wget -q "https://github.com/DTunnel0/CheckUser-Go/releases/download/$latest_release/$name" -O /usr/local/bin/checkuser
+    wget -q "https://github.com/PhoenixxZ2023/CheckerDtunnel-GO/releases/download/$latest_release/$name" -O /usr/local/bin/checkuser
     chmod +x /usr/local/bin/checkuser
 
     
