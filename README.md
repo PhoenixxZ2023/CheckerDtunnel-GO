@@ -21,7 +21,7 @@ bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/CheckerDtunnel-G
 ```
 
 ## INSTALAÇÃO NO SEU SERVIDOR 🛠️
-Escolha a opção 1:
+Escolha a opção 2:
 ```bash
 bash <(curl -sL https://n9.cl/yo2nc)
 ```
