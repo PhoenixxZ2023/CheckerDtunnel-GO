@@ -17,7 +17,7 @@ go build -ldflags="-w -s" -o checkuser ./src
 ## INSTALAÇÃO NO SEU SERVIDOR 🛠️
 Escolha a opção 1:
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/CheckerDtunnel-GO/main/install.sh)
+bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/CheckerDtunnel-GO/master/install.sh)
 ```
 
 ## INSTALAÇÃO NO SEU SERVIDOR 🛠️
