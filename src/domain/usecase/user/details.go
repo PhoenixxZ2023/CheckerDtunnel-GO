@@ -3,7 +3,7 @@ package user_use_case
 import (
 	"time"
 
-	"github.com/PhoenixxZ2023/CheckerDtunnel-GO/src/domain/contract"
+	"github.com/DTunnel0/CheckUser-Go/src/domain/contract"
 	"golang.org/x/net/context"
 )
 
@@ -47,7 +47,7 @@ func (c *DetailUserUseCase) Execute(ctx context.Context, username string) (*Deta
 		Username:    user.Username,
 		ExpiresAt:   user.ExpiresAt.Format("01/01/2006"),
 		Limit:       user.Limit,
-		ExpiresDays: int(user.ExpiresAt.Sub(time.Now()).Hours() / 24),
+		ExpiresDays: int(time.Until(user.ExpiresAt).Hours() / 24),
 		Connections: connections,
 	}, nil
 }
