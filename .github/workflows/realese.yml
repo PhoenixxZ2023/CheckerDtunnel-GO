@@ -1,0 +1,60 @@
+name: Latest Release
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        goosarch:
+          - 'linux/arm'
+          - 'linux/arm64'
+          - 'linux/amd64'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.21'
+
+      - name: Get OS and arch info
+        run: |
+          GOOSARCH=${{matrix.goosarch}}
+          GOOS=${GOOSARCH%/*}
+          GOARCH=${GOOSARCH#*/}
+          CGO_ENABLED=0
+          BINARY_NAME=checkuser-$GOOS-$GOARCH
+          VERSION=$(grep -oP 'version\s*=\s*"\K[^"]+' ./src/main.go)
+          echo "BINARY_NAME=$BINARY_NAME" >> $GITHUB_ENV
+          echo "GOOS=$GOOS" >> $GITHUB_ENV
+          echo "GOARCH=$GOARCH" >> $GITHUB_ENV
+          echo "CGO_ENABLED=$CGO_ENABLED" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Build
+        run: go build -ldflags='-w -s' -o "$BINARY_NAME" -v ./src
+
+      - name: Release Notes
+        run: git log $(git describe HEAD~ --tags --abbrev=0)..HEAD --pretty='format:* %h %s%n  * %an <%ae>' --no-merges >> ".github/RELEASE-TEMPLATE.md"
+
+      - name: Release with Notes
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{env.VERSION}}
+          body_path: ".github/RELEASE-TEMPLATE.md"
+          files: ${{env.BINARY_NAME}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
